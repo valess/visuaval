@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8856-9">
+  <title>TP Visualización Valeria S.</title>
+  <style>
+    table#t01 {
+    width: 100%;    
+    background-color: #f1f1f1;
+}
+  </style>
+ 
+</head>
+<body>
+<table id="t01" style="width:100%">
+  <tr>
+    <th align="left"><img src="http://www.best-masters.com/logo_ecole/426.jpg" style="width:150px;height:70px"/></th>
+    <th></th> 
+    
+  </tr>
+  <tr>
+    <td style="font-size:200%"><b>TRABAJO PRACTICO: VISUALIZACIÓN</th>
+    <td align="center"><a href="http://mapa.buenosaires.gob.ar/" ><img src="http://digital.buenosaires.gob.ar/wp-content/uploads/2013/07/mapa3.png" alt="http://mapa.buenosaires.gob.ar/" style="width:250px;height:190px"/>
+	</a></td> 
+    
+  </tr>
+  <tr>
+    <td><i>Valeria I. Soliani</i></td>
+    <td/>
+  </tr>
+<tr>
+    <td>Diplomatura Big Data - ITBA 2014</td>
+<td/>
+</tr>
+</table>
+  
+  <p>Este trabajo se realizó tomando una muestra de 15 días sobre el mapa de búsquedas de la ciudad de Buenos Aires.</p>
+
+  <p>El archivo log conteniendo dicha información tiene un registro para cada búsqueda realizada con tres atributos: el día y la hora en formato Timestamp, la latitud y la longitud.</p>
+  <p>Este archivo log fue enriquecido incorporando el barrio al que pertenece cada par (lat, long), la superficie de dicho barrio, el día de la semana al que pertenece cada medición y <br>
+la geocodificación inversa para poder determinar la dirección de cada punto.</p>
+ <h3>1) Análisis espacial</h3>
+   <h4>1.1) Búsquedas por barrio</h4>
+  <p>Antes de analizar la cantidad de búsquedas por cada barrio, es importante tener en cuenta ciertas características de los barrios.<br> Una muy importante es su tamaño o superficie.</p>
+  <p>En en el esquema 1.1 se muestran dichas diferencias.</p>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 458px;'><noscript><a href='#'><img alt='Superficies ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;to&#47;todo&#47;Superficies&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='458' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='todo&#47;Superficies' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;to&#47;todo&#47;Superficies&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/todo/Superficies' target='_blank'>Learn About Tableau</a></div></div>
+  <h5>Gráfico 1.1 - Tamaños de los barrios en km<sup>2</sup></h5>
+
+  <p>Aquí se ve claramente que el barrio con mayor superficie es Palermo</p>
+  <p>Teniendo en cuenta lo anterior, se muestra a continuación la cantidad de búsquedas por barrio contrapuesto con la cantidad de búsquedas relativas a la superficie del barrio (dividiendo cantidad de búsquedas por superficie).</p>
+  
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 458px;'><noscript><a href='#'><img alt='Comparación búsquedas por barrio ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;to&#47;todo&#47;Comparacinbsquedasporbarrio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='458' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='todo&#47;Comparacinbsquedasporbarrio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;to&#47;todo&#47;Comparacinbsquedasporbarrio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/todo/Comparacinbsquedasporbarrio' target='_blank'>Learn About Tableau</a></div></div>
+  <h5>Gráfico 1.2 - Búsquedas por barrio vs. Búsquedas por barrio relativo a la superficie.</h5>
+
+  <p>En el cuadro de la izquierda se ve que Palermo es el barrio que concentra más búsquedas. <br> Sin embargo, al considerar su superficie, las búsquedas de San Nicolás son superiores.</p>
+  <p>A priori, teniendo en cuenta el perfil del barrio de San Nicolás, zona de oficinas y bancos, se puede deducir que las búsquedas son de tipo laboral y no tanto recreativas.</p>
+
+   <h3>2) Análisis temporal</h3>
+   <h4>2.1) Búsquedas por día de la semana</h4>
+  <p>Se muestra a continuación las búsquedas relativas a cada día de la semana. El total de cada día es el acumulado de las búsquedas totales de la muestra.</p>
+
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 461px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Di&#47;Dias&#47;Bsquedasporda&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='461' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='Dias&#47;Bsquedasporda' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Di&#47;Dias&#47;Bsquedasporda&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Dias/Bsquedasporda' target='_blank'>Learn About Tableau</a></div></div>
+  <h5>Gráfico 2.1-Días de la semana.</h5>
+
+  <p>En este cuadro se puede ver que las búsquedas son mayores de lunes a viernes que durante el fin de semana.</p>
+
+   <h4>2.2) Búsquedas por horas de cada día</h4>
+
+ <p>Para esta visualización se incorporaron a los días de las semanas, las horas de cada día, expresadas como un valor entero que pertenece al intervalo [0,23].</p>
+ <script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 461px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Di&#47;Dias&#47;Bsquedaspordiavshora&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='461' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='Dias&#47;Bsquedaspordiavshora' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Di&#47;Dias&#47;Bsquedaspordiavshora&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Dias/Bsquedaspordiavshora' target='_blank'>Learn About Tableau</a></div></div>
+  <h5>Gráfico 2.2.-Días de la semana vs. horas</h5>
+ El siguiente g´rafico presenta otra forma de visualizar lo expuesto en el gráfico 2.2).<br>Aquí se muestra en el eje X, la cantidad de búsquedas, en el eje Y las horas y el día de la semana está expresado en el color de las líneas.</p>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 458px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Di&#47;Dias&#47;DasvsHoras&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='458' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='Dias&#47;DasvsHoras' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Di&#47;Dias&#47;DasvsHoras&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Dias/DasvsHoras' target='_blank'>Learn About Tableau</a></div></div>
+  <h5>Gráfico 2.3-Horas vs Días de la semana.</h5>  
+
+<h3>3) Análisis espacio-temporal</h3>
+  <p>Aquí combinamos los barrios con los días de la semana. Los siguientes datos se tomaron de manera absoluta, sin tener en cuenta la relación con la superficie.</p>
+
+  <script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 458px;'><noscript><a href='#'><img alt='Barrios por dia de la semana ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;BarrioDias&#47;Barriospordiadelasemana&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='458' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='BarrioDias&#47;Barriospordiadelasemana' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;BarrioDias&#47;Barriospordiadelasemana&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/BarrioDias/Barriospordiadelasemana' target='_blank'>Learn About Tableau</a></div></div>
+  <h5>Gráfico 3.1-Barrios vs. días de la semana.</h5>
+  
+  <h3>4) Ranking de puntos de la ciudad más buscados</h3>
+  <p>En el siguiente mapa de la ciudad de Buenos Aires se indican los 20 puntos más buscados de la ciudad en el período de la muestra. En cada punto se puede ver la dirección y, en caso que sea conocido, el edificio al que pertence</p>
+  <h5>4.1-Top 20</h5>
+  <script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 702px; height: 458px;'><noscript><a href='#'><img alt='búsquedas mas frecuentes ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;ma&#47;mapaTop20&#47;bsquedasmasfrecuentes&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='702' height='458' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='mapaTop20&#47;bsquedasmasfrecuentes' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;ma&#47;mapaTop20&#47;bsquedasmasfrecuentes&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:702px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/mapaTop20/bsquedasmasfrecuentes' target='_blank'>Learn About Tableau</a></div></div>
+  
+  
+
+  
+  
+</body>
+</html>
